@@ -22,7 +22,7 @@ val farc:Double = 5.4
 // 4. Store de balue true as Boolean
 val bool:Boolean = true
 
-println(five, abs, frac, bool)
+println(five, abc, frac, bool)
 
 // 5. Store a miltiline String
 // this prints as is, multiline
