@@ -15,4 +15,12 @@ println(c)
 // we also have expression that do not return a value
 val e = println("void in other languages")
 println(e)
-println({})
+println({}) // this is Unit too
+
+// exercises solution
+val result = {
+  val feetPerMile = 5280
+  val yardsPerMile = feetPerMile / 3.0
+  2000 / yardsPerMile
+}
+println(result)
