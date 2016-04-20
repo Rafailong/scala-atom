@@ -14,3 +14,11 @@ if(2 > 4) {
 } else {
   println("4 is greater than 2")
 }
+
+// we can have results from the if-else stament
+// due to it is an expression
+val x = {
+  if(99 > 100) { 4 }
+  else { 5 }
+}
+println(x)
