@@ -12,3 +12,7 @@ val rCompound = {
   a + b
 }
 println("result of a compound expression: " + rCompound)
+
+// this throws "error: not found: value `a`"
+// println("here, out of the compound expression we cannot access `a` o `b` " + a)
+
