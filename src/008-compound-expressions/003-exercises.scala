@@ -37,3 +37,34 @@ if(a <= c && b <= c) {
   if(a <= c) { println("a is less than or equal than c") }
   if(b <= c) { println("b is less than or equal than c") }
 }
+
+/*
+3. A compound expression for good temperature.
+*/
+val activity = "swimming"
+val hour = 10
+
+val isOpen = {
+  if(activity == "swimming" || activity == "ice skating") {
+    val opens = 9
+    val closes = 20
+    println("Operating hours: " + opens + " - " + closes)
+    (hour >= opens && hour <= closes)
+  } else {
+    false
+  }
+}
+
+val swimmingTemp = 70
+val iceSkatingTemp = 30
+val goodTemperatur = {
+  if(activity == "swimming") {
+    (swimmingTemp >= 80 && swimmingTemp <= 100)
+  } else if(activity == "ice skating") {
+    (iceSkatingTemp >= 32 && iceSkatingTemp <= 60)
+  } else {
+    false
+  }
+}
+val doActivity = isOpen && goodTemperatur
+println(activity + ": " + isOpen + " && " + goodTemperatur + " = " + doActivity)
