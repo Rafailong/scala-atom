@@ -41,7 +41,7 @@ if(a <= c && b <= c) {
 /*
 3. A compound expression for good temperature.
 */
-val activity = "swimming"
+var activity = "swimming"
 val hour = 10
 
 val isOpen = {
@@ -68,3 +68,14 @@ val goodTemperatur = {
 }
 val doActivity = isOpen && goodTemperatur
 println(activity + ": " + isOpen + " && " + goodTemperatur + " = " + doActivity)
+
+/*
+4. Create a compound expression that determines whether to do an activity.
+*/
+val distance = 5
+activity = "biking"
+val willDo = {
+  if(activity == "running" && distance < 6) { println(activity + ": " + true) }
+  if(activity == "biking" && distance < 20) { println(activity + ": " + true) }
+  if(activity == "swimming" && distance < 1) { println(activity + ": " + true) }
+}
