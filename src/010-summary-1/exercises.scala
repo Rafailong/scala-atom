@@ -41,3 +41,23 @@ println(multilineString)
 // 8. What happens if you try to store the number 15.4 in an Int?
 // val x:Int = 15.4
 // A type mismatch error is thrown
+
+// 9. Modify weightStatus from BMI to produce Unit
+
+val weightKg = 72
+val heightM = 1.80
+val weightStatus = {
+  val bmi = weightKg / (heightM * heightM)
+  println("BMI", bmi)
+  if(bmi < 18.5) { println("underweight! :/") }
+  else if(bmi < 25) { println("normalito :)") }
+  else { println("overweight :(") }
+}
+
+// 10. Modify weightStatus to produce an ideal weight based on a
+//   BMI of 22.0
+val weightStatusIdeal = {
+  val bmi:Double = 22
+  bmi * (heightM * heightM) / 703.07
+}
+println("Ideal weight: ", weightStatusIdeal)
