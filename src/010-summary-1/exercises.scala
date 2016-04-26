@@ -26,3 +26,18 @@ println(doubleOne, doubleTwo)
 val quince:Double = 15
 println(quince)
 
+// 6. Save and print a multiline String
+val multilineString = """this
+is a multiline
+String
+"""
+println(multilineString)
+
+// 7. What happens if you try to store the String "maybe" in a Boolean?
+//   A type mismatch error is thrown
+// val bool:Boolean = "maybe"
+
+
+// 8. What happens if you try to store the number 15.4 in an Int?
+// val x:Int = 15.4
+// A type mismatch error is thrown
