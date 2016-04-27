@@ -95,3 +95,20 @@ val m1 = manyTimesString(3, "abc")
 assert(m1 == "abcabcabc")
 val m2 = manyTimesString(2, "123")
 assert(m2 == "123123")
+
+/**
+* 7. BMI as a method.
+*/
+def bmiStatus(weight:Int, height:Double):String = {
+  val bmi = weight / (height * height)
+  println("BMI", bmi)
+  if(bmi < 18.5) { "underweight" }
+  else if(bmi < 25) { "normalito" }
+  else { "overweight" }
+}
+val normal = bmiStatus(71, 1.80)
+assert(normal == "normalito")
+val over = bmiStatus(90, 1.80)
+assert(over == "overweight")
+val under = bmiStatus(60, 1.90)
+assert(under == "underweight")
