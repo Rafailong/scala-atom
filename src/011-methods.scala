@@ -61,3 +61,23 @@ val t1 = isArg1GreaterThanArg2(4.1, 4.12)
 assert(t1 == false)
 val t2 = isArg1GreaterThanArg2(2.1, 1.2)
 assert(t2)
+
+/**
+* 4. Create a method getMe that takes a String and returns the same String
+*   but all in lowecase letters.
+*/
+def getMe(me:String):String = { me.toLowerCase() }
+val s1 = getMe("abraCadabra")
+assert(s1 == "abracadabra")
+val s2 = getMe("zyxwVUT")
+assert(s2 == "zyxwvut")
+
+/**
+* 5. Create a method addStrings that takes two Strings as arguments
+*   and returns the Strings appended.
+*/
+def addStrings(s1:String, s2:String):String = { s1 + s2 }
+val appended1 = addStrings("abc", "def")
+assert(appended1 == "abcdef")
+val appended2 = addStrings("zyx", "abc")
+assert(appended2 == "zyxabc")
