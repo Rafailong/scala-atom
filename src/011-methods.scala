@@ -38,3 +38,26 @@ val b = getSquare(6)
 assert(b == 36, "Expected " + 36 + " Got " + b)
 val c = getSquare(5)
 assert(c == 25, "Expected " + 25 + " Got " + c)
+
+/**
+* 2. Create a method getSquareDouble that takes a Double argument and returns its square.
+*/
+def getSquareDouble(x:Double):Double = {
+  x * x
+}
+val d = getSquareDouble(1.2)
+assert(d == 1.44, "Expected " + 1.44 + " Got " + d)
+val e = getSquareDouble(5.7)
+assert(e == 32.49, "Expected " + 32.49 + " Got " + e)
+
+/**
+* 3. Create a method isArg1GreaterThanArg2 that takes two Double arguments
+*   Return true if the first arg is greater than the second.
+*/
+def isArg1GreaterThanArg2(a:Double, b:Double):Boolean = {
+  a > b
+}
+val t1 = isArg1GreaterThanArg2(4.1, 4.12)
+assert(t1 == false)
+val t2 = isArg1GreaterThanArg2(2.1, 1.2)
+assert(t2)
