@@ -81,3 +81,17 @@ val appended1 = addStrings("abc", "def")
 assert(appended1 == "abcdef")
 val appended2 = addStrings("zyx", "abc")
 assert(appended2 == "zyxabc")
+
+/**
+* 6. Create a method manyTimesString that takes a String and an Int
+*   as arguments and returns the String duplicated that many times.
+*/
+def manyTimesString(times:Int, s:String):String = {
+  var temp:String = ""
+  (1 to times) foreach (t => temp += s) // this beauty is a Scala Range :D
+  temp
+}
+val m1 = manyTimesString(3, "abc")
+assert(m1 == "abcabcabc")
+val m2 = manyTimesString(2, "123")
+assert(m2 == "123123")
