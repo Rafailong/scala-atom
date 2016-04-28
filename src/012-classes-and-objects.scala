@@ -33,3 +33,23 @@ val string1 = "This is an experiment"
 println(string1)
 val split = string1.split(" ")
 assert(split.length == 4)
+
+/**
+* 3. Create a String object s1 as a ver initialized to "Sally". Create a second Strin object s2
+*   initialized to "Sally". Use s1.equals(s2) to determine if the two Strings are aquivalent.
+*   If they are, print "s1 and s2 are equal" otherwise "s1 and s2 are not equal".
+*/
+var s1 = "Sally"
+var s2 = "Sally"
+areEqual(s1, s2)
+s2 = "Sam"
+areEqual(s1, s2)
+assert(s1 == "Sally")
+
+def areEqual(s1:String, s2:String):Unit = {
+  if (s1.equals(s2)) {
+    println("s1 and s2 are equal")
+  } else {
+    println("s1 and s2 are not equal")
+  }
+}
