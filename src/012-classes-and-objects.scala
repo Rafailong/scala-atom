@@ -59,3 +59,21 @@ def areEqual(s1:String, s2:String):Unit = {
     println("s1 and s2 are not equal")
   }
 }
+
+/**
+* 5. Building from Exercise 3, create a String object s3 by calling toUpperCase on s1.
+*   Call contentEquals to compare the Strings s1 and s3. If they match, print
+*   "s1 and s3 are equal" otherwise "s1 and s3 are not equal".
+*/
+val s3 = s1.toUpperCase
+areContentsEqual(s1, s3)
+areContentsEqual(s1.toUpperCase, s3)
+
+def areContentsEqual(s1:String, s2:String):Unit = {
+  println(s1, s2)
+  if (s1.contentEquals(s2)) {
+    println("s1 and s2 are equal")
+  } else {
+    println("s1 and s2 are not equal")
+  }
+}
