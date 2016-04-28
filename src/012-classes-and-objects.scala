@@ -42,6 +42,12 @@ assert(split.length == 4)
 var s1 = "Sally"
 var s2 = "Sally"
 areEqual(s1, s2)
+
+/**
+* 4. Building from Exercise 3, set s2 to "Sam". Do the strings match?
+*   If they match, print "s1 and s2 are equal" otherwise "s1 and s2 are not equal".
+*   Is s1 still set to "Sally"?
+*/
 s2 = "Sam"
 areEqual(s1, s2)
 assert(s1 == "Sally")
