@@ -24,3 +24,12 @@ println("range5 step value", range5.step)
 
 val testRange = range4.start until range4.end by range5.step
 assert(testRange.length == 3)
+
+/**
+* 2. Crate a String object initialized to "This is an experiment"  and call the split method
+*   method on it, passing a space " " as the argument to the split method.
+*/
+val string1 = "This is an experiment"
+println(string1)
+val split = string1.split(" ")
+assert(split.length == 4)
