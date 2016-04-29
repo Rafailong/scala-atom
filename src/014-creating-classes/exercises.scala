@@ -27,3 +27,12 @@ val l2 = new Lion
 val g2 = new Giraffe
 val g3 = new Giraffe
 println(l2, g2, g3)
+
+/**
+* 3. Create a class Zebra that prints "I have stripes" when you create it.
+*/
+class Zebra {
+  println("I have stripes")
+}
+
+val z = new Zebra
