@@ -24,3 +24,13 @@ assert(s1 == "Morot on")
 
 val s2 = motorboat.stop()
 assert(s2 == "Morot off")
+
+// 2
+class Flare {
+  def light():String = { "Flare used!" }
+}
+
+val flare = new Flare
+
+val f1 = flare.light()
+assert(f1 == "Flare used!")
