@@ -34,3 +34,28 @@ val flare = new Flare
 
 val f1 = flare.light()
 assert(f1 == "Flare used!")
+
+// 3
+class Sailboat1 {
+  def raise():String = { "Sails raised" }
+  def lower():String = { "Sails lowered" }
+  def signal():String = {
+    val f = new Flare
+    f.light()
+  }
+}
+
+class Motorboat1 {
+  def start():String = { "Morot on" }
+  def stop():String = { "Morot off" }
+  def signal():String = {
+    val f = new Flare
+    f.light()
+  }
+}
+
+val sailsboat1 = new Sailboat1
+val motorboat1 = new Motorboat1
+
+assert(sailsboat1.signal() == "Flare used!")
+assert(motorboat1.signal() == "Flare used!")
