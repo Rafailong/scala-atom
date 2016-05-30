@@ -1,4 +1,5 @@
-import pythagorean.RigthTriangle
+import me.rafaavila.{RigthTriangle => RT}
+import me.rafaavila.EquilateralTriangle
 
 val rt = new RigthTriangle
 println(rt.hypotenuse(3, 4))
