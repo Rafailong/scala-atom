@@ -1,4 +1,4 @@
-package pythagorean
+package me.rafaavila.pythagorean
 
 class RigthTriangle {
   def hypotenuse(a:Double, b:Double):Double = {
