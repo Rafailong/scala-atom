@@ -9,3 +9,9 @@ class RigthTriangle {
     a*b/2
   }
 }
+
+class EquilateralTriangle {
+  def area(side:Double):Double = {
+    (Math.sqrt(3)/4) * (side*side)
+  }
+}
