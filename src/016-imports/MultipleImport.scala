@@ -10,5 +10,8 @@ import util.Properties
 // we can change the name of the imported, like
 // import util.{Random => R, Properties => P}
 
+// and finally we can import all the content of a package, like
+// import util._
+
 val r = new Random
 val p = Properties
