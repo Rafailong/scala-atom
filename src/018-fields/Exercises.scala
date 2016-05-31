@@ -21,3 +21,10 @@ cup3.add(-2) is 0
 println("ex 3")
 cup3.percentFull = 100
 cup3.percentFull is 100
+
+
+// exercise 4
+println("ex 4")
+val cup4 = new Cup4
+cup4.setPercentFull(55)
+cup4.getPercentFull() is 55
