@@ -11,3 +11,7 @@ val myValue4 = 10
 myValue3 is myValue4
 
 myVal1 is myValue3 // this will match
+
+val myValue5 = "10"
+
+myVal1 is myValue5 // this will match
