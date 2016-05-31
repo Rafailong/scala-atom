@@ -32,3 +32,14 @@ for (i <- Range(0, 11)) {
 sumEven is 30
 sumOdd is 25
 (sumEven + sumOdd) is 55
+
+// 6
+sumEven = 0
+sumOdd = 0
+for (i <- 0 to 10) {
+  if (i % 2 == 0) sumEven += i
+  else sumOdd += i
+}
+sumEven is 30
+sumOdd is 25
+(sumEven + sumOdd) is 55
