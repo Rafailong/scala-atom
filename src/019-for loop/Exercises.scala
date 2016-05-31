@@ -14,3 +14,10 @@ for (i <- Range(0, 11)) {
   sum += i
 }
 sum is 55
+
+// 4
+sum = 0
+for (i <- Range(0, 11)) {
+  if (i % 2 == 0) sum += i
+}
+sum is 30
