@@ -6,4 +6,4 @@ r1 is Range(0, 10)
 
 // 2
 val r2 = Range(0, 10).inclusive
-r1 is Range(0, 11)
+r2 is Range(0, 11)
