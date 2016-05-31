@@ -21,3 +21,14 @@ for (i <- Range(0, 11)) {
   if (i % 2 == 0) sum += i
 }
 sum is 30
+
+// 5
+var sumEven = 0
+var sumOdd = 0
+for (i <- Range(0, 11)) {
+  if (i % 2 == 0) sumEven += i
+  else sumOdd += i
+}
+sumEven is 30
+sumOdd is 25
+(sumEven + sumOdd) is 55
