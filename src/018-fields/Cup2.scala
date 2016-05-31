@@ -1,3 +1,5 @@
+package me.rafaavila
+
 import com.atomicscala.AtomicTest._
 
 class Cup2 {
@@ -13,11 +15,11 @@ class Cup2 {
   }
 }
 
-val c2 = new Cup2
-c2.percentFull is 0
-
-val added = c2.add(10)
-added is 10
-
-val added1 = c2.add(100)
-added1 is 100
+// val c2 = new Cup2
+// c2.percentFull is 0
+//
+// val added = c2.add(10)
+// added is 10
+//
+// val added1 = c2.add(100)
+// added1 is 100
