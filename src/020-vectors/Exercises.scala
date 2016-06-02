@@ -23,3 +23,15 @@ for(s <- v1) {
 for(i <- setence.split(" ").reverse) {
   println(i)
 }
+
+// 7
+val vI = Vector(1, 2, 3)
+val vD = Vector(1.5, 2.5, 3.5)
+
+vI.min is 1
+vI.max is 3
+vI.sum is 6
+
+vD.min is 1.5
+vD.max is 3.5
+vD.sum is 7.5
