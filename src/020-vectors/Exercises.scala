@@ -12,3 +12,9 @@ setence is "The dog visited the firehouse! "
 
 // 4
 setence.replace("firehouse! ", "firehouse!") is "The dog visited the firehouse!"
+
+
+// 5
+for(s <- v1) {
+  println(s.reverse)
+}
