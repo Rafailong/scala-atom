@@ -18,3 +18,8 @@ setence.replace("firehouse! ", "firehouse!") is "The dog visited the firehouse!"
 for(s <- v1) {
   println(s.reverse)
 }
+
+// 6
+for(i <- setence.split(" ").reverse) {
+  println(i)
+}
