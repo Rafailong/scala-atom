@@ -9,3 +9,6 @@ for(s <- v1) {
   setence += s + " "
 }
 setence is "The dog visited the firehouse! "
+
+// 4
+setence.replace("firehouse! ", "firehouse!") is "The dog visited the firehouse!"
