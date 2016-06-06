@@ -58,3 +58,12 @@ forecast(50) is "Partly Sunny"
 forecast(20) is "Mostly Cloudy"
 forecast(0) is "Cloudy"
 forecast(15) is "Unknown"
+
+// 5
+val v3 = Vector("Sunny", "Mostly Sunny", "Partly Sunny", "Mostly Cloudy", "Cloudy", "Unknown")
+val v4 = Vector(100, 80, 50, 20, 0, 15)
+for(i <- v4) {
+  var index = v4.indexOf(i)
+  var f = v3(index)
+  forecast(i) is f
+}
