@@ -10,3 +10,17 @@ def matchColor(color:String):String = {
 
 matchColor("white") is "fuck it! white ain't a color"
 matchColor("blue") is "BLUE"
+
+// 2
+def oneOrTheOther(exp:Boolean):String = {
+  exp match {
+    case true => "true"
+    case _ => "false"
+  }
+}
+
+val v = Vector(1)
+val v2 = Vector(3, 4)
+
+oneOrTheOther(v == v.reverse) is "true"
+oneOrTheOther(v2 == v2.reverse) is "false"
