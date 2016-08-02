@@ -1,8 +1,8 @@
 import com.atomicscala.AtomicTest._
 
-// 1
-class Family(args:String*) {
-  def familySize():Int = { args.length }
+// 2
+class Family(dad:String, mom:String, children:String*) {
+  def familySize():Int = { children.length + 2 }
 }
 val family1 = new Family("Mom", "Dad", "Sally", "Dick")
 family1.familySize() is 4
