@@ -1,3 +1,4 @@
 bin
 *.class
 _AtomicTestErrors.txt
+.vscode/
