@@ -5,7 +5,8 @@ class F {
   def f(a:Int):Int = { a }
   def f(a:Int, b:Int):Int = { a + b }
   def f(a:Int, b:Int, c:Int):Int = { a + b + c }
-  def f(a:Int, b:Int, c:Int, d:Int):Int = { a + b + c + d }
+  def f(a:Int, b:Int, c:Int, d:Int) = { a + b + c + d }
+  // def f(a:Int, b:Int, c:Int, d:Int):Double = { a + b + c + d } // error method defined twice
 }
 
 val f = new F
