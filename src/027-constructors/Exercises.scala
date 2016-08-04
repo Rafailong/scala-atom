@@ -1,22 +1,38 @@
 import com.atomicscala.AtomicTest._
 
-// 1
-class Coffee(
-  val shots:Int = 2,
-  val decaf:Int = 0,
-  val milk:Boolean = false,
-  val toGo:Boolean = false,
-  val syrup:String = ""
-) {
-  val caf = shots - decaf
+// 2
+class Tea(name:String = "Earl Grey", milk:Boolean = false, sugar:Boolean = false, decaffeinated:Boolean = false) {
+  private def describeTea():String = {
+    var desc = name
+    if(milk) desc += " + milk"
+    if(sugar) desc += " + sugar"
+    if(decaffeinated) desc += " decaffeinated"
+    desc
+  }
+
+  private def addCalories():Int = {
+    var calories = 0
+    if(milk) calories += 100
+    if(sugar) calories += 16
+    calories
+  }
+
+  val describe = describeTea()
+  val calories = addCalories()
 }
 
-val doubleHalfCaf = new Coffee(shots = 2, decaf = 1)
-doubleHalfCaf.decaf is 1
-doubleHalfCaf.caf is 1
-doubleHalfCaf.shots is 2
+val t1 = new Tea
+t1.describe is "Earl Grey"
+t1.calories is 0
 
-val tripleHalfCaf = new Coffee(shots = 3, decaf = 2)
-tripleHalfCaf.caf is 1
-tripleHalfCaf.shots is 3
-tripleHalfCaf.decaf is 2
+val t2 = new Tea(decaffeinated = true, name = "Lemon Zinger")
+t2.describe is "Lemon Zinger decaffeinated"
+t2.calories is 0
+
+val sweetGreen = new Tea(name = "Jasmin Green", sugar = true)
+sweetGreen.describe is "Jasmin Green + sugar"
+sweetGreen.calories is 16
+
+val teaLatte = new Tea(sugar = true, milk = true)
+teaLatte.describe is "Earl Grey + milk + sugar"
+teaLatte.calories is 116
