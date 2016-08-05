@@ -13,3 +13,17 @@ clothesWasher1.capacity is 20.0
 val clothesWasher2 = new ClothesWasher(10.0)
 clothesWasher2.modelName is "modelName"
 clothesWasher2.capacity is 10.0
+
+// 2
+class ClothesWasher2(val modelName:String = "modelName", val capacity:Double = 20.0) {
+  def this(model:String) { this(modelName = model) }
+  def this(cty:Double) { this(capacity = cty) }
+}
+
+val clothesWasher2a = new ClothesWasher("model1")
+clothesWasher2a.modelName is "model1"
+clothesWasher2a.capacity is 20.0
+
+val clothesWasher2b = new ClothesWasher(10.0)
+clothesWasher2b.modelName is "modelName"
+clothesWasher2b.capacity is 10.0
