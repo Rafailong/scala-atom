@@ -2,7 +2,7 @@ import com.atomicscala.AtomicTest._
 
 class GardenGnome(val heigth:Double, val weight:Double, val happy:Boolean){
   println("Inside primary ctor")
-  return
+
   var painted:Boolean = true
 
   // notice there is no equal to sign
