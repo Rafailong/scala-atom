@@ -14,3 +14,13 @@ val people = Vector(
 people(0) is "Person(Jane,Smile,jane@smile.com)"
 people(1) is "Person(Ron,House,ron@house.com)"
 people(2) is "Person(Sally,Dove,sally@dove.com)"
+
+case class Dog(name:String, breed:String)
+val dogs = Vector(
+  Dog("Fido", "Golden Lab"),
+  Dog("Ruff", "Alaskan Malamute"),
+  Dog("Fifi", "Miniature Poodle")
+)
+dogs(0) is "Dog(Fido,Golden Lab)"
+dogs(1) is "Dog(Ruff,Alaskan Malamute)"
+dogs(2) is "Dog(Fifi,Miniature Poodle)"
