@@ -25,11 +25,11 @@ dogs(0) is "Dog(Fido,Golden Lab)"
 dogs(1) is "Dog(Ruff,Alaskan Malamute)"
 dogs(2) is "Dog(Fifi,Miniature Poodle)"
 
-case class Dimension(var height:Int, var width:Int)
+case class Dimension(height:Int, var width:Int)
 val c = Dimension(5, 7)
 c.height is 5
-c.height = 10
-c.height is 10
+// c.height = 10 // this throws reassignment error
+// c.height is 10
 c.width is 7
 c.width = 19
 c.width is 19
