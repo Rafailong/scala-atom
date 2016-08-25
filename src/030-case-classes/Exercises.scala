@@ -33,3 +33,26 @@ c.height is 5
 c.width is 7
 c.width = 19
 c.width is 19
+
+case class OtherSimpleTime(val h:Int, val m:Int = 0) {
+  def substract(OtherSimpleTime:OtherSimpleTime):OtherSimpleTime = {
+    val thisMins = (this.h * 60) + this.m
+    val otherMins = (OtherSimpleTime.h * 60) + OtherSimpleTime.m
+
+    val subs = thisMins - otherMins
+    if (subs <= 0)
+      return new OtherSimpleTime(0)
+
+    val hrs:Int = subs/60
+    val mns = subs - (hrs * 60)
+    new OtherSimpleTime(hrs, mns)
+  }
+}
+val anotherT1 = OtherSimpleTime(10, 30)
+val anotherT2 = OtherSimpleTime(9)
+val anotherST = anotherT1.substract(anotherT2)
+anotherST.h is 1
+anotherST.m is 30
+val anotherST2 = OtherSimpleTime(10).substract(OtherSimpleTime(9, 45))
+anotherST2.h is 0
+anotherST2.m is 15
