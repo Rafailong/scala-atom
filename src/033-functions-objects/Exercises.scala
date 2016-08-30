@@ -25,3 +25,10 @@ s is "7 35 49 56 "
 s = ""
 v3.foreach(n => s = s + s"${n * 7} ")
 s is "7 35 49 56 "
+
+// 6
+val between = (t:Int, l:Int, h:Int) => {
+  l <= t && t <= h
+}
+between(70, 80, 90) is false
+between(70, 60, 90) is true
