@@ -21,6 +21,7 @@ val v3 = Vector(1, 5, 7, 8)
 v3.foreach(n => s = s + s"${dogYears(n)} ")
 s is "7 35 49 56 "
 
+// 5
 s = ""
 v3.foreach(n => s = s + s"${n * 7} ")
 s is "7 35 49 56 "
