@@ -38,3 +38,9 @@ s = ""
 val v7 = Vector(1, 2, 5, 3, 7)
 v7.foreach(n => s = s + s"${n * n} ")
 s is "1 4 25 9 49 "
+
+// 8
+val pluralize = (w:String) => s"${w}s"
+pluralize("cat") is "cats"
+pluralize("dog") is "dogs"
+pluralize("silly") is "sillys"
