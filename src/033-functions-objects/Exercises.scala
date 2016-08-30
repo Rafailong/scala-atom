@@ -44,3 +44,9 @@ val pluralize = (w:String) => s"${w}s"
 pluralize("cat") is "cats"
 pluralize("dog") is "dogs"
 pluralize("silly") is "sillys"
+
+// 9
+s = ""
+val v9 = Vector("word", "cat", "animal")
+v9.foreach(w => s = s + s"${pluralize(w)} ")
+s is "words cats animals "
