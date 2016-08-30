@@ -10,3 +10,7 @@ s is "1234"
 s = ""
 v1.foreach(c => s = s + c + ",")
 s is "1,2,3,4,"
+
+// 3
+val dogYears = (y:Int) => y * 7
+dogYears(10) is 70
