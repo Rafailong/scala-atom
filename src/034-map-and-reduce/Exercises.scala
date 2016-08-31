@@ -23,3 +23,11 @@ for (i <- v) {
   set3 += i + 1
 }
 set3.toVector.sorted is Vector(2, 3, 4, 5)
+
+// 5
+val v2 = Vector(1, 10, 100, 1000)
+var sum = 0
+for (n <- v2) {
+  sum += n
+}
+sum is 1111
