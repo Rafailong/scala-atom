@@ -16,3 +16,10 @@ for (i <- v) {
   set2 += (i * 11) + 10
 }
 set2.toVector.sorted is Vector(21, 32, 43, 54)
+
+// 4
+var set3 = scala.collection.mutable.Set[Int]()
+for (i <- v) {
+  set3 += i + 1
+}
+set3.toVector.sorted is Vector(2, 3, 4, 5)
