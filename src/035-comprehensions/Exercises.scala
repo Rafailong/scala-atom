@@ -11,7 +11,7 @@ def oddLT(v:Vector[Int]):Vector[Int] = {
 val v = Vector(1, 2, 3, 4, 5, 6, 7, 8, 10, 13, 14, 17)
 oddLT(v) is Vector(1, 3, 5, 7)
 
-def oddLT2(v:Vector[Int]):Vector[Int] = {
+def oddLT2(v:List[Int]):List[Int] = {
   for {
     n <- v
     gt = n < 10
@@ -19,7 +19,7 @@ def oddLT2(v:Vector[Int]):Vector[Int] = {
     if(gt && isOdd)
   } yield n
 }
-oddLT2(v) is Vector(1, 3, 5, 7)
+oddLT2(v.toList) is List(1, 3, 5, 7)
 
 def oddLT3(v:Vector[Int]):Vector[Int] = {
   for {
