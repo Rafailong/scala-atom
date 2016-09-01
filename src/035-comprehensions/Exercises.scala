@@ -52,3 +52,15 @@ def getDates(activity:String, activities:Vector[Activity]):Vector[String] = {
 getDates("Ski", activities) is Vector("01-03", "01-10")
 getDates("Run", activities) is Vector("01-01", "01-04", "01-03")
 getDates("Bike", activities) is Vector()
+
+def getActivities(date:String, activities:Vector[Activity]):Vector[String] = {
+  for {
+    a <- activities
+    if (a.date == date)
+  } yield a.activity
+}
+getActivities("01-01", activities) is Vector("Run")
+getActivities("01-02", activities) is Vector()
+getActivities("01-03", activities) is Vector("Ski", "Run")
+getActivities("01-04", activities) is Vector("Run")
+getActivities("01-10", activities) is Vector("Ski")
