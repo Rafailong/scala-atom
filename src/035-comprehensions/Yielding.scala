@@ -33,3 +33,21 @@ def yielding3(v:Vector[Int]):Vector[Int] = {
   }
 }
 yielding3(v) is Vector(12, 32, 52, 72)
+
+def yielding4(v:Vector[Int]) = {
+  for {
+    n <- v
+    gt = n < 10
+    isOdd = n % 2 != 0
+    if(gt && isOdd)
+  } yield {
+    for(u <- Range(0, n))
+      yield u
+  }
+}
+yielding4(v) is Vector(
+  Vector(0),
+  Vector(0, 1, 2),
+  Vector(0, 1, 2, 3, 4),
+  Vector(0, 1, 2, 3, 4, 5, 6)
+)
