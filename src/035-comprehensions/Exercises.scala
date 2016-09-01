@@ -21,8 +21,8 @@ def oddLT2(v:List[Int]):List[Int] = {
 }
 oddLT2(v.toList) is List(1, 3, 5, 7)
 
-def oddLT3(v:Vector[Int]):Vector[Int] = {
-  for {
+def oddLT3(v:List[Int]):Vector[Int] = {
+  val r = for {
     n <- v
     gt = n < 10
     isOdd = n % 2 != 0
@@ -31,8 +31,9 @@ def oddLT3(v:Vector[Int]):Vector[Int] = {
     val x = n * 10
     x + 2
   }
+  r.toVector
 }
-oddLT3(v) is Vector(12, 32, 52, 72)
+oddLT3(v.toList) is Vector(12, 32, 52, 72)
 
 def oddLT4(v:Vector[Int]) = {
   for {
