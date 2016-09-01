@@ -20,3 +20,16 @@ def yielding2(v:Vector[Int]):Vector[Int] = {
   } yield n
 }
 yielding2(v) is Vector(1, 3, 5, 7)
+
+def yielding3(v:Vector[Int]):Vector[Int] = {
+  for {
+    n <- v
+    gt = n < 10
+    isOdd = n % 2 != 0
+    if(gt && isOdd)
+  } yield {
+    val x = n * 10
+    x + 2
+  }
+}
+yielding3(v) is Vector(12, 32, 52, 72)
