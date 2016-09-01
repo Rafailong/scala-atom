@@ -35,20 +35,20 @@ def oddLT3(v:List[Int]):Vector[Int] = {
 }
 oddLT3(v.toList) is Vector(12, 32, 52, 72)
 
-def oddLT4(v:Vector[Int]) = {
-  for {
-    n <- v
-    gt = n < 10
-    isOdd = n % 2 != 0
-    if(gt && isOdd)
-  } yield {
-    for(u <- Range(0, n))
-      yield u
-  }
-}
-oddLT4(v) is Vector(
-  Vector(0),
-  Vector(0, 1, 2),
-  Vector(0, 1, 2, 3, 4),
-  Vector(0, 1, 2, 3, 4, 5, 6)
+case class Activity(date:String, activity:String)
+val activities = Vector(
+  Activity("01-01", "Run"),
+  Activity("01-03", "Ski"),
+  Activity("01-04", "Run"),
+  Activity("01-10", "Ski"),
+  Activity("01-03", "Run")
 )
+def getDates(activity:String, activities:Vector[Activity]):Vector[String] = {
+  for {
+    a <- activities
+    if (a.activity == activity)
+  } yield a.date
+}
+getDates("Ski", activities) is Vector("01-03", "01-10")
+getDates("Run", activities) is Vector("01-01", "01-04", "01-03")
+getDates("Bike", activities) is Vector()
