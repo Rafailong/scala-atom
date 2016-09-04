@@ -43,3 +43,24 @@ quantify(100) is "medium"
 quantify(20.56) is "small"
 quantify(10000) is "large"
 quantify(-15999) is "small"
+
+def forecast(percent:Int):String = {
+  percent match {
+    case p if 81 to 100 contains p => "Sunny"
+    case p if 51 to 80  contains p => "Mostly Sunny"
+    case p if 21 to 50  contains p => "Partly Sunny"
+    case p if 1  to 20  contains p => "Mostly Cloudy"
+    case 0 => "Cloudy"
+    case _ => "Unknown"
+  }
+}
+forecast(100) is "Sunny"
+forecast(81) is "Sunny"
+forecast(80) is "Mostly Sunny"
+forecast(51) is "Mostly Sunny"
+forecast(50) is "Partly Sunny"
+forecast(21) is "Partly Sunny"
+forecast(20) is "Mostly Cloudy"
+forecast(1) is "Mostly Cloudy"
+forecast(0) is "Cloudy"
+forecast(-1) is "Unknown"
