@@ -30,19 +30,22 @@ convertToSize(Person("Rafa")) is 1
 convertToSize(45.6F) is 46
 convertToSize(Vector(1, 2, 3)) is 0
 
+private def quantifyH(a: Double): String = a match {
+    case n if (n < 100d) => "small"
+    case n if (n >= 100d && n <= 1000d) => "medium"
+    case n if (n > 1000d) => "large"
+  }
+
 def quantify(a: Any): String = a match {
-    case n:Int if (n < 100) => "small"
-    case n:Int if (n >= 100 && n <= 1000) => "medium"
-    case n:Int if (n > 1000) => "large"
-    case n:Double if (n < 100d) => "small"
-    case n:Double if (n >= 100d && n <= 1000d) => "medium"
-    case n:Double if (n > 1000d) => "large"
+    case n:Int => quantifyH(n)
+    case n:Double => quantifyH(n)
     case _ => "😣"
   }
 quantify(100) is "medium"
 quantify(20.56) is "small"
 quantify(10000) is "large"
 quantify(-15999) is "small"
+quantify(true) is "😣"
 
 def forecast(percent:Int):String = {
   percent match {
