@@ -38,3 +38,6 @@ tranvel(trips(0)) is "Train line Reading Vector(Traveler(Rafa,Avila), Traveler(M
 tranvel(trips(1)) is "Bus size 100 Vector(Traveler(Rafa,Avila), Traveler(March,Avila))"
 tranvel(trips(2)) is "Plane B757 Vector(Traveler(Rafa,Avila), Traveler(March,Avila))"
 tranvel(travelers(0)) is "Rafa is walking"
+
+case class Kitten(name:String)
+tranvel(Kitten("Kitty")) is "Kitten(Kitty) is in limbo!"
