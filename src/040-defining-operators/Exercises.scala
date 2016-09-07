@@ -24,3 +24,13 @@ st.m is 0
 val st2 = new SimpleTime(10, 30) - new SimpleTime(9, 45)
 st2.h is 0
 st2.m is 45
+
+
+class FancyNumber1(val n:Int) {
+  def power(x:Int) = scala.math.pow(n, x)
+}
+val f1 = new FancyNumber1(2)
+f1.power(3) is 8
+
+val f2 = new FancyNumber1(10)
+f2.power(2) is 100
