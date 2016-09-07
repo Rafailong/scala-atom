@@ -28,9 +28,10 @@ st2.m is 45
 
 class FancyNumber1(val n:Int) {
   def ^(x:Int) = scala.math.pow(n, x)
+  def **(x:Int) = ^(x)
 }
 val f1 = new FancyNumber1(2)
 f1.^(3) is 8
 
 val f2 = new FancyNumber1(10)
-f2 ^ 2 is 100
+f2 ** 2 is 100
