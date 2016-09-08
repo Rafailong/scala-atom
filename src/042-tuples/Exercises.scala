@@ -10,3 +10,8 @@ def test(tuple:(Int, String, String)) {
 test((65, "Sunny", "Stars"))
 test((78, "Cloudy", "Satellites"))
 test((51, "Blue", "Night"))
+
+
+val info = (50, 45)
+info._1 is 50
+info._2 is 45
