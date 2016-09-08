@@ -15,3 +15,22 @@ test((51, "Blue", "Night"))
 val info = (50, 45)
 info._1 is 50
 info._2 is 45
+
+
+def weather(temperature:Int, humidity:Int):(String, String) = {
+  val tempS = temperature match {
+    case t if (t > 80) => "Hot"
+    case t if (t < 50) => "Cold"
+    case _ => "Temperate"
+  }
+  val humS = humidity match {
+    case h if (h > 40 && temperature >= 50) => "Humid"
+    case h if (h > 40) => "Damp"
+    case _ => "Pleasant"
+  }
+  (tempS, humS)
+}
+weather(81, 45) is ("Hot", "Humid")
+weather(50, 45) is ("Temperate", "Humid")
+weather(40, 50) is ("Cold", "Damp")
+weather(30, 35) is ("Cold", "Pleasant")
