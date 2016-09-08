@@ -34,3 +34,11 @@ weather(81, 45) is ("Hot", "Humid")
 weather(50, 45) is ("Temperate", "Humid")
 weather(40, 50) is ("Cold", "Damp")
 weather(30, 35) is ("Cold", "Pleasant")
+
+
+val (heat1, moisture1) = weather(81, 45)
+heat1 is "Hot"
+moisture1 is "Humid"
+val (heat2, moisture2) = weather(27, 55)
+heat2 is "Cold"
+moisture2 is "Damp"
