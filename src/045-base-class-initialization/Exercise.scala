@@ -88,3 +88,12 @@ class CarTrip(startDate:String, endDate:String, val cities:Vector[String])
 val cities = Vector("Boston", "LA", "San Francisco")
 val c = new CarTrip("6/1/2012", "7/1/2012", cities)
 c is "From Boston to San Francisco: 6/1/2012 to 7/1/2012"
+
+// case-to-case inheritance is prohibited. To overcome this limitation, use extractors to pattern match on non-leaf nodes.
+// case class X
+// case class Y extends X
+
+case class Base(n:Int) extends Trip("", "", "", "")
+class Child(n:Int) extends Base(n)
+new Child(1) is "From  to :  to "
+new Child(1).n is 1
