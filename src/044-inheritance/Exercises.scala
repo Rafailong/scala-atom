@@ -16,3 +16,17 @@ says(new GreatApe())   is "says Grrr!"
 says(new Bonobo())     is "says Grrr!"
 says(new Chimpanzee()) is "says Grrr!"
 says(new BonoboB())    is "says Grrr!"
+
+
+class Cycle() {
+  val wheels = 2
+  def ride = "Riding!"
+}
+class Bicycle extends Cycle
+
+val c = new Cycle
+c.ride is "Riding!"
+
+val b = new Bicycle
+b.ride is "Riding!"
+b.wheels is 2
