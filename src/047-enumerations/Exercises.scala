@@ -21,3 +21,10 @@ MonthName.February is "February"
 MonthName.February.id is 2
 MonthName.December.id is 12
 MonthName.July.id is 7
+
+// 3
+import MonthName._
+
+def monthNumber(month:MonthName):Int = month.id
+July is "July"
+monthNumber(July) is 7
