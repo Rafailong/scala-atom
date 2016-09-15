@@ -40,3 +40,44 @@ season(January) is "Winter"
 season(April) is "Spring"
 season(August) is "Summer"
 season(November) is "Autumn"
+
+// 5
+object MoveInX extends Enumeration {
+  type MoveInX = Value
+  val MoveInX1, MoveInX2, MoveInX3 = Value
+}
+object MoveInY extends Enumeration {
+  type MoveInY = Value
+  val MoveInY1, MoveInY2, MoveInY3 = Value
+}
+object Sign extends Enumeration {
+  type Sign = Value
+  val X, Y, Empty = Value
+}
+import MoveInX._
+import MoveInY._
+import Sign._
+class Cell {
+  private var entry:Sign = Sign.Empty
+  def set(e:Sign) = if (entry == Empty) {
+      entry = e
+      "Good move"
+    } else {
+      "Invalid move"
+    }
+  def get = entry
+  override def toString(): String = s"$entry"
+}
+class Grid {
+  private val cells = Vector(
+    Vector(new Cell, new Cell, new Cell),
+    Vector(new Cell, new Cell, new Cell),
+    Vector(new Cell, new Cell, new Cell)
+  )
+  def play(s:Sign, x:MoveInX, y:MoveInY) =
+    cells(y.id)(x.id).set(s)
+}
+val g = new Grid
+g.play(X, MoveInX3, MoveInY1) is "Good move"
+g.play(Y, MoveInX2, MoveInY1) is "Good move"
+g.play(X, MoveInX3, MoveInY1) is "Invalid move"
