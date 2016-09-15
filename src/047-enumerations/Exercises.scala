@@ -28,3 +28,15 @@ import MonthName._
 def monthNumber(month:MonthName):Int = month.id
 July is "July"
 monthNumber(July) is 7
+
+// 4
+def season(month:MonthName):String = month.id match {
+  case n if (March.id <= n && May.id >= n) => "Spring"
+  case n if (June.id <= n && August.id >= n) => "Summer"
+  case n if (September.id <= n && November.id >= n) => "Autumn"
+  case _ => "Winter"
+}
+season(January) is "Winter"
+season(April) is "Spring"
+season(August) is "Summer"
+season(November) is "Autumn"
