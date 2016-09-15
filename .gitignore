@@ -2,3 +2,5 @@ bin
 *.class
 _AtomicTestErrors.txt
 .vscode/
+.metadata/
+.worksheet/
