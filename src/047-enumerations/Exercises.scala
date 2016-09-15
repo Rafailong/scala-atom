@@ -81,3 +81,24 @@ val g = new Grid
 g.play(X, MoveInX3, MoveInY1) is "Good move"
 g.play(Y, MoveInX2, MoveInY1) is "Good move"
 g.play(X, MoveInX3, MoveInY1) is "Invalid move"
+
+// 6
+object Level extends Enumeration {
+  type Level = Value
+  val Overflow = Value(1)
+  val High, Medium, Low, Draining, Pooling, Dry, Empty = Value
+}
+import Level._
+def checkLevel(lvl:Level) = lvl match {
+  case Overflow => ">>> Overflow"
+  case Pooling => "Warning!"
+  case l if(l == Level.Empty || l == Dry) => "Alert"
+  case _ => s"Level $lvl OK"
+}
+Level.Draining is Draining
+Level.Draining.id is 5
+checkLevel(Low) is "Level Low OK"
+checkLevel(Level.Empty) is "Alert"
+checkLevel(Draining) is "Level Draining OK"
+checkLevel(Pooling) is "Warning!"
+checkLevel(Dry) is "Alert"
