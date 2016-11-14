@@ -10,4 +10,4 @@ From now on I am doing this using this great tool https://scalafiddle.io so I wi
 - Abstract Classes https://scalafiddle.io/sf/dxImXo8/2
 - Traits https://scalafiddle.io/sf/yiobQnM/0
 - Uniform Access & Setters https://scalafiddle.io/sf/Eys7rgT/0
-- A Little Reflection https://scalafiddle.io/sf/u3Q5iDK/3
+- A Little Reflection https://scalafiddle.io/sf/u3Q5iDK/4
