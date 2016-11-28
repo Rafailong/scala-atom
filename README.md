@@ -11,3 +11,4 @@ From now on I am doing this using this great tool https://scalafiddle.io so I wi
 - Traits https://scalafiddle.io/sf/yiobQnM/0
 - Uniform Access & Setters https://scalafiddle.io/sf/Eys7rgT/0
 - A Little Reflection https://scalafiddle.io/sf/u3Q5iDK/4
+- Polymorphism https://scalafiddle.io/sf/SFugw0Q/6
